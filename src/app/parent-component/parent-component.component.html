@@ -1,0 +1,12 @@
+<h2> Parent Component</h2>
+<p> Sending Name to Child: {{parentNameSig()}}</p>
+<input [(ngModel)]="inputValue" type="text"/>
+<button (click)="sendInput()">Send Input</button>
+
+<app-child-component
+ [nameSig]="parentNameSig()"
+ (nameUpdatedSig)="handleChildUpdate($event)">
+
+</app-child-component>
+
+<p>Received from Child: {{messageFromChildSig()}}</p>

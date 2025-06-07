@@ -1,0 +1,9 @@
+<h3> Child Component</h3>
+
+<label>Edit name: </label>
+<input
+  [value]="updatedNameSig()"
+  (input)="updatedNameSig.set($any($event.target).value)"
+/>
+<br><br>
+<button (click)="sendUpdatedName()">Send Updated name to Patent</button>
